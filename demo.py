@@ -403,10 +403,8 @@ def main(args):
 
     MARKDOWN = \
         """
-        ## FaceMe: Robust Blind Face Restoration With Personal Identification
-        ### 🎯 Innovation Points:
-        - **MRIA**: Multi-Reference Identity Aggregation with quality-based weighting
-        - **IDR**: Iterative Diffusion Refinement for optimal identity preservation
+        ## Diffusion-Based Face Restoration with Multi-Reference Identity
+        ## 基于扩散模型的定制化人像恢复方法研究与应用
         """
 
     block = gr.Blocks().queue()
@@ -433,8 +431,6 @@ def main(args):
                     steps = gr.Slider(label="Steps", minimum=1, maximum=100, value=50, step=1)
                     use_color_fix = gr.Checkbox(label="Use Color Correction", value=True)
                     seed = gr.Slider(label="Seed", minimum=0, maximum=2147483647, step=1, value=233)
-                
-                with gr.Accordion("🎯 Innovation Settings", open=True):
                     use_mria = gr.Checkbox(
                         label="Enable MRIA (Multi-Reference Identity Aggregation)",
                         value=True,
